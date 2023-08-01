@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Management</title>
+</head>
+<style>
+ body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1{
+    margin-bottom: 20px;
+}
+
+.content-form{
+    margin-bottom: 20px;
+}
+.content-form label{
+    display: block;
+    margin-bottom: 5px;
+}
+
+.content-form input[type="text"],
+.content-form textarea {
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+} 
+.content-form input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: greenyellow;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.content-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.content-list li {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.content-list li:last-child {
+    margin-bottom: 0;
+}
+</style>
+<body>
+    
+    <title>Video Management</title>
+    <h1>Video Management</h1>
+
+    <div class="container">
+        <div id="videoList">
+          
+            <form id="addVideoForm">
+                <h2>Add Video</h2>
+                <label for="VideoTitle">Title:</label>
+                <input type="text" id="VideoTitle" required>
+
+                <label for="videoUrl">URL:</label>
+                <input type="text" id="videoUrl" required>
+
+                <button type="submit">Add</button>
+            </form>
+        </div>
+
+        <title>Photo Management</title>
+        <h1>Photo Management</h1>
+
+        <input type="file" id="upload" accept="image/">
+        <div id="gallery"></div>
+
+
+        <h1>Content Management</h1>
+
+        <!--content form-->
+        <form class="content-form">
+            <label for="title">Title:</label>
+            <input type="text" id="title" required>
+
+            <label for="description">Description</label>
+            <textarea id="description" required></textarea>
+
+            <input type="submit" value="Add content">
+        </form>
+
+        <!--content list-->
+        <ul class="content-list" id="contentList"></ul>
+
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    
+    var form = document.querySelector(". content-form");
+    var contentList = document.getElementById("contentList");
+
+    form.addEventListener("submit" , function(event) {
+        event.preventDefault();
+
+        var title = document.getElementById("title").value;
+        var description = document.getElementById("description").value;
+        
+        var listItem = document.createElement("li");
+        listItem.innerHTML = "<h3>" + title + "<h3/><p>" + description + "</p>";
+
+        contentList.appendChild(listItem);
+
+        form.reset();
+    });
+});
+r̥
+    </script>
+</body>
+</html>

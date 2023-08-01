@@ -1,0 +1,60 @@
+
+
+.container {
+    min-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2{
+    text-align: center;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label, input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+button {
+    display: block;
+    margin-top: 10px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 30px;
+}
+
+#gallery {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.thumbnail {
+    margin: 10px;
+    width: 200px;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: auto;
+}
+
+.delete-button {
+    display: none;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
