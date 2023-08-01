@@ -1,0 +1,43 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+#task-list,
+#user-list{
+    float: left;
+    width: 50%;
+    padding: 20px;
+    cursor: pointer;
+}
+
+#task-list h2,
+#user-list h2{
+border-bottom: 1px solid #ccc;
+padding-bottom: 10px;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+li{
+    margin-bottom: 10px;
+}
+
+button{
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
